@@ -49,6 +49,13 @@ body {
     letter-spacing: 0.02em;
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    outline: 2px solid tomato;
+}
+
 /* Контакти */
 .contacts .link {
     font-weight: 500;
