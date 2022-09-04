@@ -24,6 +24,11 @@ body {
     text-decoration: none
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* колір основного тексту #757575*/
 /* вторинний колір тексту #212121*/
 /* Акцент #2196F3*/
@@ -81,7 +86,8 @@ body {
 }
 
 /* Шапка */
-.cap {
+.cap,
+.footer {
     background-color: #2F303A;
 }
 .cap-title {
@@ -114,6 +120,15 @@ body {
 
 /* Секції */
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.section.features-padding {
+    padding-top: 94px;
+    padding-bottom: 0;
+}
+
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -127,6 +142,7 @@ body {
 /* Скритий текст */
 .hidden {
     font-size: 0;
+    margin: 0;
 }
 
 /* Особливості */
@@ -141,8 +157,6 @@ body {
     text-transform: uppercase;
 }
 .features-list .paragraph {
-    margin-top: 0;
-    margin-bottom: 0px;
     font-size: 14px;
     line-height: 1.71;
 }
