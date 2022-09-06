@@ -39,7 +39,29 @@ p {
 
 /* Заголовок сайту */
 /* Логотип */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
+    margin-right: 93px;
     color: var(--accent-color);
     font-family: Raleway, cursive;
     font-size: 26px;
@@ -48,28 +70,51 @@ p {
 .accent-header {color: #000000;}
 
 /* Кнопки навигації */
+.site-nav {
+    display: flex;
+}
+
+.site-nav .item +.item {
+    margin-left: 50px;
+}
+
+/* .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+} */
+
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--title-text-color);
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    outline: 2px solid tomato;
 }
 
 /* Контакти */
+.contacts {
+    display: flex;
+}
+
+.contacts .item + .item {
+    margin-left: 50px;
+}
+
 .contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primery-text-color);
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--primery-text-color);
 }
 
 .site-nav .link:hover,
@@ -85,12 +130,12 @@ p {
     color: var(--accent-color);
 }
 
-/* Шапка */
-.cap,
+/* Герой */
+.hero,
 .footer {
     background-color: #2F303A;
 }
-.cap-title {
+.hero-title {
     margin-top: 0;
     margin-bottom: 40px;
     font-weight: 900;
@@ -199,7 +244,17 @@ p {
 }
 
 /* Стилі для портфоліо */
-/* Кнопки */
+/* Кнопки фільтрації*/
+
+.filter {
+    display: flex;
+    justify-content: center;
+}
+
+.filter .item + .item {
+    margin-left: 8px;
+}
+
 .buttons {
     border-width: 0;
     border-radius: 4px;
@@ -215,7 +270,7 @@ p {
 }
 .buttons:hover,
 .buttons:focus {
-    padding: 6px 25px;
+    padding: 6px 22px;
     color: #FFFFFF;
     background-color: #2196F3;
 }
