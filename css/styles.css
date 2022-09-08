@@ -32,10 +32,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* колір основного тексту #757575*/
 /* вторинний колір тексту #212121*/
 /* Акцент #2196F3*/
-/* вторинний колір фону #F5F4FA color class=sbk (secondary background color)*/ 
-.sbk {
-    background-color: var(--secondary-bg-color)
-}
+/* вторинний колір фону #F5F4FA*/ 
 
 /* Заголовок сайту */
 /* Логотип */
@@ -136,7 +133,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Герой */
 
-.hero .container {
+.hero {
     padding: 200px 0;
 }
 
@@ -163,15 +160,16 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
     padding: 10px 32px;
 
-    background-color: #2196F3;
+    background-color: var(--accent-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     display: flex;
     align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: var(--secondary-bg-color);
+
+    cursor: pointer;
 }
 
 /* Секції */
@@ -181,7 +179,6 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-bottom: 94px;
 }
 .section.features-padding {
-    padding-top: 94px;
     padding-bottom: 0;
 }
 
@@ -238,9 +235,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Команда */
 
+.team {
+    background-color: var(--secondary-bg-color)
+}
+
 .team-list {
     display: flex;
     justify-content: space-between;
+}
+
+.team .card {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-list .item {
@@ -272,31 +279,38 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Підвал сайту */
 
-.footer .container {
+.footer {
     padding: 60px 0;
+}
+
+.footer .logo {
+    margin: 0;
 }
 
 .accent-footer {
     color: #FFFFFF;
 }
 
-.footer-link .map {
+.adress {
+    margin-top: 20px;
     font-style: normal;
+}
+
+/* .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+} */
+
+address .item:not(:first-child) {
+    margin-top: 9px;
+}
+
+.footer-link .map {
     font-size: 14px;
     line-height: 1.71;
     color: #FFFFFF;
 }
 
-.adress {
-    margin-top: 20px;
-}
-
-address .nondecor {
-    margin-top: 9px;
-}
-
 .footer-link .contacts {
-    font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
@@ -308,6 +322,7 @@ address .nondecor {
 .filter {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .filter .item + .item {
@@ -315,18 +330,18 @@ address .nondecor {
 }
 
 .buttons {
-    border-width: 0;
+    font-weight: 500;
+    border: none;
     border-radius: 4px;
     padding: 6px 22px;
+    letter-spacing: 0.03em;
 
     color: var(--title-text-color);
     background-color: var(--secondary-bg-color);
 
     font-size: 16px;
     line-height: 1.62;
-    text-align: center;
     cursor: pointer;
-    margin-bottom: 50px;
 }
 
 .buttons:hover,
@@ -338,13 +353,13 @@ address .nondecor {
 
 /* Картки */
 
-.portfolio-title {
+.portfolio-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.portfolio-title .item {
+.portfolio-list .item {
     display: block;
 }
 
@@ -354,7 +369,7 @@ address .nondecor {
     border-top: none;
 }
 
-.portfolio-title .title {
+.portfolio-list .title {
     color: var(--title-text-color);
     font-style: normal;
     font-weight: 700;
@@ -364,7 +379,7 @@ address .nondecor {
     margin-bottom: 4px;
 }
 
-.portfolio-title .paragraph {
+.portfolio-list .paragraph {
     color: var(--primery-text-color);
     font-size: 16px;
     line-height: 1.88;
